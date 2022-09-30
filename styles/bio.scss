@@ -37,24 +37,34 @@ body {
 		padding-bottom: 1.5rem;
 		width: 100%;
 
-		a:hover {
+		&__band--shows:hover {
 			border-style: solid;
 			border-color: $Mercury;
-			border-width: 3px;
-			border-top: none;
-			border-left: none;
-			border-right: none;
-			padding-bottom: 21px;
+			border-width: 0px 0px 5px 0px;
+			padding-bottom: 18px;
 		}
 
-		a:active {
+		&__band--biography:hover {
+			border-style: solid;
+			border-color: $Mercury;
+			border-width: 0px 0px 5px 0px;
+			padding-bottom: 18px;
+		}
+
+		&__band--shows:active {
 			border-style: solid;
 			border-color: white;
-			border-width: 3px;
-			border-top: none;
-			border-left: none;
-			border-right: none;
-			padding-bottom: 21px;
+			border-width: 0px 0px 5px 0px;
+			padding-bottom: 18px;
+			color: white;
+			font-family: AvenirNext;
+		}
+
+		&__band--biography:active {
+			border-style: solid;
+			border-color: white;
+			border-width: 0px 0px 5px 0px;
+			padding-bottom: 18px;
 			color: white;
 			font-family: AvenirNext;
 		}
@@ -63,7 +73,7 @@ body {
 			display: flex;
 			justify-content: center;
 			margin: 0;
-			padding-bottom: 20px;
+			padding: 18px 0px 20px 0px;
 		}
 
 		&__logo-icon {
@@ -103,24 +113,34 @@ body {
 		gap: 7.5rem;
 		padding-left: 40px;
 
-		a:hover {
+		&__band--shows:hover {
 			border-style: solid;
 			border-color: $Mercury;
-			border-width: 3px;
-			border-top: none;
-			border-left: none;
-			border-right: none;
-			padding-bottom: 21px;
+			border-width: 0px 0px 5px 0px;
+			padding-bottom: 28px;
 		}
 
-		a:active {
+		&__band--biography:hover {
+			border-style: solid;
+			border-color: $Mercury;
+			border-width: 0px 0px 5px 0px;
+			padding-bottom: 28px;
+		}
+
+		&__band--shows:active {
 			border-style: solid;
 			border-color: white;
-			border-width: 3px;
-			border-top: none;
-			border-left: none;
-			border-right: none;
-			padding-bottom: 21px;
+			border-width: 0px 0px 5px 0px;
+			padding-bottom: 28px;
+			color: white;
+			font-family: AvenirNext;
+		}
+
+		&__band--biography:active {
+			border-style: solid;
+			border-color: white;
+			border-width: 0px 0px 5px 0px;
+			padding-bottom: 28px;
 			color: white;
 			font-family: AvenirNext;
 		}
@@ -162,24 +182,34 @@ body {
 		padding-bottom: 30px;
 		padding-left: 130px;
 
-		a:hover {
+		&__band--shows:hover {
 			border-style: solid;
 			border-color: $Mercury;
-			border-width: 3px;
-			border-top: none;
-			border-left: none;
-			border-right: none;
-			padding-bottom: 30px;
+			border-width: 0px 0px 3px 0px;
+			padding-bottom: 40px;
 		}
 
-		a:active {
+		&__band--biography:hover {
+			border-style: solid;
+			border-color: $Mercury;
+			border-width: 0px 0px 3px 0px;
+			padding-bottom: 40px;
+		}
+
+		&__band--shows:active {
 			border-style: solid;
 			border-color: white;
-			border-width: 3px;
-			border-top: none;
-			border-left: none;
-			border-right: none;
-			padding-bottom: 30px;
+			border-width: 0px 0px 3px 0px;
+			padding-bottom: 40px;
+			color: white;
+			font-family: AvenirNext;
+		}
+
+		&__band--biography:active {
+			border-style: solid;
+			border-color: white;
+			border-width: 0px 0px 3px 0px;
+			padding-bottom: 40px;
 			color: white;
 			font-family: AvenirNext;
 		}
@@ -476,6 +506,7 @@ body {
 		background-color: $Alabaster;
 		color: $Black;
 		padding-left: 40px;
+		padding-right: 40px;
 
 		&__heading {
 			font-size: 56px;
@@ -483,12 +514,10 @@ body {
 			font-family: AvenirDemi;
 			margin-bottom: 28px;
 			letter-spacing: 0.6px;
-			padding-left: 40px;
-			padding-right: 40px;
 		}
 
 		&__photos {
-			width: 88%;
+			width: 100%;
 			height: 380px;
 			margin-bottom: 33px;
 		}
@@ -498,6 +527,7 @@ body {
 		background-color: $Alabaster;
 		color: $Black;
 		padding-left: 40px;
+		padding-bottom: 20px;
 
 		&__heading {
 			font-size: 56px;
@@ -509,6 +539,7 @@ body {
 
 		&__photos {
 			height: 200px;
+			width: 90%;
 		}
 
 		&__photos-grid {
@@ -546,6 +577,496 @@ body {
 			grid-template-columns: 1fr 1fr 1fr;
 			justify-content: stretch;
 			grid-column-gap: 40px;
+		}
+	}
+}
+
+.article {
+	@include mobile {
+		& input[type="text"] {
+			font-size: 30px;
+			font-family: Avenir;
+			letter-spacing: 0px;
+			padding: 20px;
+			border-radius: 10px;
+			border-style: solid;
+			border-width: 3px;
+			border-color: $Mercury;
+			background-color: $Alabaster;
+			margin-top: 15px;
+			margin-bottom: 45px;
+			margin-right: 40px;
+		}
+
+		& input[type="text"]::-webkit-input-placeholder {
+			color: $Black;
+		}
+
+		& input[type="comment"] {
+			font-size: 30px;
+			font-family: Avenir;
+			letter-spacing: 0px;
+			padding-top: 20px;
+			padding-left: 25px;
+			padding-bottom: 165px;
+			border-radius: 10px;
+			border-style: solid;
+			border-width: 3px;
+			border-color: $Mercury;
+			background-color: $Alabaster;
+			margin-top: 15px;
+			margin-bottom: 35px;
+			margin-right: 40px;
+		}
+
+		& input[type="comment"]::-webkit-input-placeholder {
+			color: $Black;
+		}
+
+		&__heading {
+			font-family: AvenirDemi;
+			letter-spacing: 1.5px;
+			color: $Black;
+			font-size: 56px;
+			font-family: AvenirDemi;
+			letter-spacing: 0.6px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-left: 40px;
+		}
+
+		&__comment-image {
+			background-image: url(../assets/images/Mohan-muruge.jpg);
+			border-radius: 50%;
+			width: 100px;
+			height: 90px;
+			background-size: cover;
+			background-position-x: left;
+			margin-right: 30px;
+			margin-top: 45px;
+			margin-left: 40px;
+		}
+
+		&__comment-box {
+			font-family: Avenir;
+			display: flex;
+			justify-content: flex-start;
+		}
+
+		&__comment-form {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			width: 100%;
+		}
+
+		&__form-name {
+			color: #afafaf;
+			font-size: 25px;
+			font-family: AvenirDemi;
+		}
+
+		&__form-comment {
+			color: #afafaf;
+			font-size: 25px;
+			font-family: AvenirDemi;
+		}
+
+		&__comment-button {
+			color: white;
+			width: 75%;
+			font-size: 35px;
+			font-family: AvenirDemi;
+			font-weight: 700;
+			background-color: $Black;
+			border-radius: 10px;
+			padding: 24px;
+			margin-left: 150px;
+			margin-top: 15px;
+			margin-bottom: 38px;
+			border-color: $Black;
+			margin-right: 40px;
+		}
+
+		&__comments-image {
+			background-color: $Mercury;
+			border-radius: 50%;
+			width: 400px;
+			height: 80px;
+			margin-top: 30px;
+		}
+
+		&__comments {
+			font-family: Avenir;
+			display: flex;
+			justify-content: space-around;
+			gap: 40px;
+			margin-right: 40px;
+			margin-left: 40px;
+		}
+
+		&__comments--displayed {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__comments-name {
+			font-family: AvenirDemi;
+			font-size: 30px;
+			color: $Black;
+		}
+
+		&__comments-date {
+			color: #afafaf;
+			font-size: 30px;
+		}
+
+		&__comments--message {
+			font-size: 30px;
+			color: $Black;
+			margin-top: -15px;
+			line-height: 40px;
+		}
+
+		& hr {
+			border-top: 3px solid $Mercury;
+			border-bottom: 0px;
+			margin-left: 40px;
+			margin-right: 40px;
+			margin-top: 5px;
+		}
+	}
+
+	@include tablet {
+		& input[type="text"] {
+			font-size: 30px;
+			font-family: Avenir;
+			letter-spacing: 0px;
+			padding: 20px;
+			border-radius: 10px;
+			border-style: solid;
+			border-width: 3px;
+			border-color: $Mercury;
+			background-color: $Alabaster;
+			margin-top: 15px;
+			margin-bottom: 45px;
+			margin-right: 140px;
+		}
+
+		& input[type="text"]::-webkit-input-placeholder {
+			color: $Black;
+		}
+
+		& input[type="comment"] {
+			font-size: 30px;
+			font-family: Avenir;
+			letter-spacing: 0px;
+			padding-top: 20px;
+			padding-left: 25px;
+			padding-bottom: 165px;
+			border-radius: 10px;
+			border-style: solid;
+			border-width: 3px;
+			border-color: $Mercury;
+			background-color: $Alabaster;
+			margin-top: 15px;
+			margin-bottom: 35px;
+			margin-right: 40px;
+		}
+
+		& input[type="comment"]::-webkit-input-placeholder {
+			color: $Black;
+		}
+
+		&__heading {
+			font-family: AvenirDemi;
+			letter-spacing: 1.5px;
+			color: $Black;
+			font-size: 56px;
+			font-family: AvenirDemi;
+			letter-spacing: 0.6px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-left: 40px;
+		}
+
+		&__comment-image {
+			background-image: url(../assets/images/Mohan-muruge.jpg);
+			border-radius: 50%;
+			width: 100px;
+			height: 90px;
+			background-size: cover;
+			background-position-x: left;
+			margin-right: 30px;
+			margin-top: 45px;
+			margin-left: 40px;
+		}
+
+		&__comment-box {
+			font-family: Avenir;
+			display: flex;
+			justify-content: flex-start;
+		}
+
+		&__comment-form {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			width: 100%;
+		}
+
+		&__form-name {
+			color: #afafaf;
+			font-size: 25px;
+			font-family: AvenirDemi;
+		}
+
+		&__form-comment {
+			color: #afafaf;
+			font-size: 25px;
+			font-family: AvenirDemi;
+		}
+
+		&__comment-button {
+			color: white;
+			width: 75%;
+			font-size: 35px;
+			font-family: AvenirDemi;
+			font-weight: 700;
+			background-color: $Black;
+			border-radius: 10px;
+			padding: 24px;
+			margin-left: 150px;
+			margin-top: 15px;
+			margin-bottom: 38px;
+			border-color: $Black;
+			margin-right: 40px;
+		}
+
+		&__comments-image {
+			background-color: $Mercury;
+			border-radius: 50%;
+			width: 400px;
+			height: 80px;
+			margin-top: 30px;
+		}
+
+		&__comments {
+			font-family: Avenir;
+			display: flex;
+			justify-content: space-around;
+			gap: 40px;
+			margin-right: 40px;
+			margin-left: 40px;
+		}
+
+		&__comments--displayed {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__comments-name {
+			font-family: AvenirDemi;
+			font-size: 30px;
+			color: $Black;
+		}
+		&__comments-date {
+			color: #afafaf;
+			font-size: 30px;
+		}
+
+		&__comments--message {
+			font-size: 30px;
+			color: $Black;
+			margin-top: -15px;
+			line-height: 40px;
+		}
+
+		& hr {
+			border-top: 3px solid $Mercury;
+			border-bottom: 0px;
+			margin-left: 40px;
+			margin-right: 40px;
+			margin-top: 5px;
+		}
+	}
+
+	@include desktop {
+		& input[type="text"] {
+			font-size: 30px;
+			width: 49%;
+			font-family: Avenir;
+			letter-spacing: 0px;
+			padding: 20px;
+			border-radius: 10px;
+			border-style: solid;
+			border-width: 3px;
+			border-color: $Mercury;
+			background-color: $Alabaster;
+			margin-top: 15px;
+			margin-bottom: 45px;
+			margin-right: 140px;
+		}
+
+		& input[type="text"]::-webkit-input-placeholder {
+			color: $Black;
+		}
+
+		& input[type="comment"] {
+			font-size: 30px;
+			width: 50%;
+			font-family: Avenir;
+			letter-spacing: 0px;
+			padding-top: 20px;
+			padding-left: 25px;
+			padding-bottom: 165px;
+			border-radius: 10px;
+			border-style: solid;
+			border-width: 3px;
+			border-color: $Mercury;
+			background-color: $Alabaster;
+			margin-top: 15px;
+			margin-bottom: 35px;
+			margin-right: 40px;
+		}
+
+		& input[type="comment"]::-webkit-input-placeholder {
+			color: $Black;
+		}
+
+		&__heading {
+			font-family: AvenirDemi;
+			letter-spacing: 1.5px;
+			color: $Black;
+			font-size: 56px;
+			font-family: AvenirDemi;
+			letter-spacing: 0.6px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-left: 40px;
+		}
+
+		&__comment-image {
+			background-image: url(../assets/images/Mohan-muruge.jpg);
+			border-radius: 50%;
+			width: 100px;
+			height: 90px;
+			background-size: cover;
+			background-position-x: left;
+			margin-right: 30px;
+			margin-top: 45px;
+			margin-left: 40px;
+			position: relative;
+			left: 300px;
+		}
+
+		&__comment-box {
+			font-family: Avenir;
+			display: flex;
+			justify-content: flex-start;
+		}
+
+		&__comment-form {
+			position: relative;
+			left: 300px;
+		}
+
+		&__form-name {
+			color: #afafaf;
+			font-size: 25px;
+			font-family: Avenir;
+		}
+
+		&__form-comment {
+			color: #afafaf;
+			font-size: 25px;
+			font-family: Avenir;
+		}
+
+		&__comment-button {
+			color: white;
+			width: 20%;
+			font-size: 35px;
+			font-family: AvenirDemi;
+			font-weight: 700;
+			background-color: $Black;
+			border-radius: 10px;
+			padding: 24px;
+			margin-left: 925px;
+			margin-top: 15px;
+			margin-bottom: 38px;
+			border-color: $Black;
+		}
+
+		&__comments-imageTop {
+			background-color: $Mercury;
+			border-radius: 50%;
+			width: 152px;
+			height: 80px;
+			margin-top: 30px;
+		}
+
+		&__comments-imageMiddle {
+			background-color: $Mercury;
+			border-radius: 50%;
+			width: 142px;
+			height: 80px;
+			margin-top: 30px;
+		}
+
+		&__comments-imageBottom {
+			background-color: $Mercury;
+			border-radius: 50%;
+			width: 157px;
+			height: 80px;
+			margin-top: 30px;
+		}
+
+		&__comments {
+			font-family: Avenir;
+			display: flex;
+			justify-content: space-around;
+			gap: 40px;
+			margin-right: 40px;
+			margin-left: 40px;
+		}
+
+		&__comments--displayed {
+			display: flex;
+			justify-content: space-between;
+			width: 50%;
+		}
+
+		&__comments-name {
+			font-family: AvenirDemi;
+			font-size: 25px;
+			color: $Black;
+		}
+		&__comments-date {
+			color: #afafaf;
+			font-size: 25px;
+		}
+
+		&__comments--message {
+			font-size: 30px;
+			color: $Black;
+			margin-top: -15px;
+			line-height: 40px;
+			width: 50%;
+		}
+
+		&__allComments {
+			position: relative;
+			left: 225px;
+		}
+
+		& hr {
+			border-top: 3px solid $Mercury;
+			border-bottom: 0px;
+			margin-left: 40px;
+			margin-right: 40px;
+			margin-top: 5px;
+			width: 60%;
 		}
 	}
 }
@@ -618,17 +1139,25 @@ body {
 			margin-top: 150px;
 		}
 
+		&__logo--icon {
+			width: 280px;
+			margin-top: 80px;
+		}
+
 		&__copyrights {
 			font-size: 26px;
 			font-family: Avenir;
 			padding-bottom: 40px;
+			margin-bottom: 0px;
 		}
 	}
 
 	@include tablet {
 		width: 100%;
+		height: 600px;
 		padding-left: 40px;
 		padding-right: 40px;
+		margin-top: 50px;
 
 		&__heading {
 			font-size: 55px;
@@ -706,7 +1235,7 @@ body {
 			justify-content: flex-end;
 			align-items: flex-start;
 			position: relative;
-			bottom: 360px;
+			bottom: 460px;
 			right: 65px;
 		}
 		&__copyrights {
@@ -715,6 +1244,7 @@ body {
 			padding-bottom: 65px;
 			padding-top: 25px;
 			margin-top: 0px;
+			margin-bottom: 0px;
 		}
 	}
 
@@ -723,6 +1253,9 @@ body {
 		height: 460px;
 		padding-left: 130px;
 		padding-right: 130px;
+		padding-bottom: 100px;
+		margin-top: 120px;
+		margin-bottom: 0px;
 
 		&__heading {
 			font-size: 43px;
@@ -733,19 +1266,19 @@ body {
 		}
 
 		&__socials {
-			margin-right: 70px;
+			margin-right: 40px;
 		}
 
 		&__socials--facebook {
-			width: 23px;
+			width: 15px;
 		}
 
 		&__socials--instagram {
-			width: 37px;
+			width: 28px;
 		}
 
 		&__socials--twitter {
-			width: 43px;
+			width: 30px;
 		}
 
 		&__all-socials {
@@ -801,8 +1334,8 @@ body {
 			justify-content: flex-end;
 			align-items: flex-start;
 			position: relative;
-			bottom: 300px;
-			right: 80px;
+			bottom: 380px;
+			right: 20px;
 		}
 
 		&__copyrights {
@@ -810,6 +1343,8 @@ body {
 			font-family: Avenir;
 			padding-bottom: 60px;
 			margin-top: 0px;
+			position: relative;
+			bottom: 20px;
 		}
 	}
 }
