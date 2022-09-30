@@ -28,23 +28,31 @@ body {
     padding-bottom: 1.5rem;
     width: 100%;
   }
-  .navbar a:hover {
+  .navbar__band--shows:hover {
     border-style: solid;
     border-color: #e1e1e1;
-    border-width: 3px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding-bottom: 21px;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 18px;
   }
-  .navbar a:active {
+  .navbar__band--biography:hover {
+    border-style: solid;
+    border-color: #e1e1e1;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 18px;
+  }
+  .navbar__band--shows:active {
     border-style: solid;
     border-color: white;
-    border-width: 3px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding-bottom: 21px;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 18px;
+    color: white;
+    font-family: AvenirNext;
+  }
+  .navbar__band--biography:active {
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 18px;
     color: white;
     font-family: AvenirNext;
   }
@@ -52,7 +60,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding-bottom: 20px;
+    padding: 18px 0px 20px 0px;
   }
   .navbar__logo-icon {
     width: 240px;
@@ -88,23 +96,31 @@ body {
     gap: 7.5rem;
     padding-left: 40px;
   }
-  .navbar a:hover {
+  .navbar__band--shows:hover {
     border-style: solid;
     border-color: #e1e1e1;
-    border-width: 3px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding-bottom: 21px;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 28px;
   }
-  .navbar a:active {
+  .navbar__band--biography:hover {
+    border-style: solid;
+    border-color: #e1e1e1;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 28px;
+  }
+  .navbar__band--shows:active {
     border-style: solid;
     border-color: white;
-    border-width: 3px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding-bottom: 21px;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 28px;
+    color: white;
+    font-family: AvenirNext;
+  }
+  .navbar__band--biography:active {
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 28px;
     color: white;
     font-family: AvenirNext;
   }
@@ -142,23 +158,31 @@ body {
     padding-bottom: 30px;
     padding-left: 130px;
   }
-  .navbar a:hover {
+  .navbar__band--shows:hover {
     border-style: solid;
     border-color: #e1e1e1;
-    border-width: 3px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding-bottom: 30px;
+    border-width: 0px 0px 3px 0px;
+    padding-bottom: 40px;
   }
-  .navbar a:active {
+  .navbar__band--biography:hover {
+    border-style: solid;
+    border-color: #e1e1e1;
+    border-width: 0px 0px 3px 0px;
+    padding-bottom: 40px;
+  }
+  .navbar__band--shows:active {
     border-style: solid;
     border-color: white;
-    border-width: 3px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding-bottom: 30px;
+    border-width: 0px 0px 3px 0px;
+    padding-bottom: 40px;
+    color: white;
+    font-family: AvenirNext;
+  }
+  .navbar__band--biography:active {
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 0px 3px 0px;
+    padding-bottom: 40px;
     color: white;
     font-family: AvenirNext;
   }
@@ -435,6 +459,7 @@ body {
     background-color: #fafafa;
     color: #323232;
     padding-left: 40px;
+    padding-right: 40px;
   }
   .section__heading {
     font-size: 56px;
@@ -442,11 +467,9 @@ body {
     font-family: AvenirDemi;
     margin-bottom: 28px;
     letter-spacing: 0.6px;
-    padding-left: 40px;
-    padding-right: 40px;
   }
   .section__photos {
-    width: 88%;
+    width: 100%;
     height: 380px;
     margin-bottom: 33px;
   }
@@ -456,6 +479,7 @@ body {
     background-color: #fafafa;
     color: #323232;
     padding-left: 40px;
+    padding-bottom: 20px;
   }
   .section__heading {
     font-size: 56px;
@@ -466,6 +490,7 @@ body {
   }
   .section__photos {
     height: 200px;
+    width: 90%;
   }
   .section__photos-grid {
     display: grid;
@@ -500,6 +525,440 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: stretch;
     grid-column-gap: 40px;
+  }
+}
+
+@media (min-width: 320px) {
+  .article input[type=text] {
+    font-size: 30px;
+    font-family: Avenir;
+    letter-spacing: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    margin-right: 40px;
+  }
+  .article input[type=text]::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .article input[type=comment] {
+    font-size: 30px;
+    font-family: Avenir;
+    letter-spacing: 0px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 165px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    margin-right: 40px;
+  }
+  .article input[type=comment]::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .article__heading {
+    font-family: AvenirDemi;
+    letter-spacing: 1.5px;
+    color: #323232;
+    font-size: 56px;
+    font-family: AvenirDemi;
+    letter-spacing: 0.6px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+  }
+  .article__comment-image {
+    background-image: url(../assets/images/Mohan-muruge.jpg);
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    background-size: cover;
+    background-position-x: left;
+    margin-right: 30px;
+    margin-top: 45px;
+    margin-left: 40px;
+  }
+  .article__comment-box {
+    font-family: Avenir;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .article__comment-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+  .article__form-name {
+    color: #afafaf;
+    font-size: 25px;
+    font-family: AvenirDemi;
+  }
+  .article__form-comment {
+    color: #afafaf;
+    font-size: 25px;
+    font-family: AvenirDemi;
+  }
+  .article__comment-button {
+    color: white;
+    width: 75%;
+    font-size: 35px;
+    font-family: AvenirDemi;
+    font-weight: 700;
+    background-color: #323232;
+    border-radius: 10px;
+    padding: 24px;
+    margin-left: 150px;
+    margin-top: 15px;
+    margin-bottom: 38px;
+    border-color: #323232;
+    margin-right: 40px;
+  }
+  .article__comments-image {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 400px;
+    height: 80px;
+    margin-top: 30px;
+  }
+  .article__comments {
+    font-family: Avenir;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .article__comments--displayed {
+    display: flex;
+    justify-content: space-between;
+  }
+  .article__comments-name {
+    font-family: AvenirDemi;
+    font-size: 30px;
+    color: #323232;
+  }
+  .article__comments-date {
+    color: #afafaf;
+    font-size: 30px;
+  }
+  .article__comments--message {
+    font-size: 30px;
+    color: #323232;
+    margin-top: -15px;
+    line-height: 40px;
+  }
+  .article hr {
+    border-top: 3px solid #e1e1e1;
+    border-bottom: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .article input[type=text] {
+    font-size: 30px;
+    font-family: Avenir;
+    letter-spacing: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    margin-right: 140px;
+  }
+  .article input[type=text]::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .article input[type=comment] {
+    font-size: 30px;
+    font-family: Avenir;
+    letter-spacing: 0px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 165px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    margin-right: 40px;
+  }
+  .article input[type=comment]::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .article__heading {
+    font-family: AvenirDemi;
+    letter-spacing: 1.5px;
+    color: #323232;
+    font-size: 56px;
+    font-family: AvenirDemi;
+    letter-spacing: 0.6px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+  }
+  .article__comment-image {
+    background-image: url(../assets/images/Mohan-muruge.jpg);
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    background-size: cover;
+    background-position-x: left;
+    margin-right: 30px;
+    margin-top: 45px;
+    margin-left: 40px;
+  }
+  .article__comment-box {
+    font-family: Avenir;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .article__comment-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+  .article__form-name {
+    color: #afafaf;
+    font-size: 25px;
+    font-family: AvenirDemi;
+  }
+  .article__form-comment {
+    color: #afafaf;
+    font-size: 25px;
+    font-family: AvenirDemi;
+  }
+  .article__comment-button {
+    color: white;
+    width: 75%;
+    font-size: 35px;
+    font-family: AvenirDemi;
+    font-weight: 700;
+    background-color: #323232;
+    border-radius: 10px;
+    padding: 24px;
+    margin-left: 150px;
+    margin-top: 15px;
+    margin-bottom: 38px;
+    border-color: #323232;
+    margin-right: 40px;
+  }
+  .article__comments-image {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 400px;
+    height: 80px;
+    margin-top: 30px;
+  }
+  .article__comments {
+    font-family: Avenir;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .article__comments--displayed {
+    display: flex;
+    justify-content: space-between;
+  }
+  .article__comments-name {
+    font-family: AvenirDemi;
+    font-size: 30px;
+    color: #323232;
+  }
+  .article__comments-date {
+    color: #afafaf;
+    font-size: 30px;
+  }
+  .article__comments--message {
+    font-size: 30px;
+    color: #323232;
+    margin-top: -15px;
+    line-height: 40px;
+  }
+  .article hr {
+    border-top: 3px solid #e1e1e1;
+    border-bottom: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 1280px) {
+  .article input[type=text] {
+    font-size: 30px;
+    width: 49%;
+    font-family: Avenir;
+    letter-spacing: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    margin-right: 140px;
+  }
+  .article input[type=text]::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .article input[type=comment] {
+    font-size: 30px;
+    width: 50%;
+    font-family: Avenir;
+    letter-spacing: 0px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 165px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    margin-right: 40px;
+  }
+  .article input[type=comment]::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .article__heading {
+    font-family: AvenirDemi;
+    letter-spacing: 1.5px;
+    color: #323232;
+    font-size: 56px;
+    font-family: AvenirDemi;
+    letter-spacing: 0.6px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+  }
+  .article__comment-image {
+    background-image: url(../assets/images/Mohan-muruge.jpg);
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    background-size: cover;
+    background-position-x: left;
+    margin-right: 30px;
+    margin-top: 45px;
+    margin-left: 40px;
+    position: relative;
+    left: 300px;
+  }
+  .article__comment-box {
+    font-family: Avenir;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .article__comment-form {
+    position: relative;
+    left: 300px;
+  }
+  .article__form-name {
+    color: #afafaf;
+    font-size: 25px;
+    font-family: Avenir;
+  }
+  .article__form-comment {
+    color: #afafaf;
+    font-size: 25px;
+    font-family: Avenir;
+  }
+  .article__comment-button {
+    color: white;
+    width: 20%;
+    font-size: 35px;
+    font-family: AvenirDemi;
+    font-weight: 700;
+    background-color: #323232;
+    border-radius: 10px;
+    padding: 24px;
+    margin-left: 925px;
+    margin-top: 15px;
+    margin-bottom: 38px;
+    border-color: #323232;
+  }
+  .article__comments-imageTop {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 152px;
+    height: 80px;
+    margin-top: 30px;
+  }
+  .article__comments-imageMiddle {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 142px;
+    height: 80px;
+    margin-top: 30px;
+  }
+  .article__comments-imageBottom {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 157px;
+    height: 80px;
+    margin-top: 30px;
+  }
+  .article__comments {
+    font-family: Avenir;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .article__comments--displayed {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .article__comments-name {
+    font-family: AvenirDemi;
+    font-size: 25px;
+    color: #323232;
+  }
+  .article__comments-date {
+    color: #afafaf;
+    font-size: 25px;
+  }
+  .article__comments--message {
+    font-size: 30px;
+    color: #323232;
+    margin-top: -15px;
+    line-height: 40px;
+    width: 50%;
+  }
+  .article__allComments {
+    position: relative;
+    left: 225px;
+  }
+  .article hr {
+    border-top: 3px solid #e1e1e1;
+    border-bottom: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 5px;
+    width: 60%;
   }
 }
 
@@ -563,17 +1022,24 @@ body {
     margin-bottom: 30px;
     margin-top: 150px;
   }
+  .footer__logo--icon {
+    width: 280px;
+    margin-top: 80px;
+  }
   .footer__copyrights {
     font-size: 26px;
     font-family: Avenir;
     padding-bottom: 40px;
+    margin-bottom: 0px;
   }
 }
 @media (min-width: 768px) {
   .footer {
     width: 100%;
+    height: 600px;
     padding-left: 40px;
     padding-right: 40px;
+    margin-top: 50px;
   }
   .footer__heading {
     font-size: 55px;
@@ -640,7 +1106,7 @@ body {
     justify-content: flex-end;
     align-items: flex-start;
     position: relative;
-    bottom: 360px;
+    bottom: 460px;
     right: 65px;
   }
   .footer__copyrights {
@@ -649,6 +1115,7 @@ body {
     padding-bottom: 65px;
     padding-top: 25px;
     margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 @media (min-width: 1280px) {
@@ -657,6 +1124,9 @@ body {
     height: 460px;
     padding-left: 130px;
     padding-right: 130px;
+    padding-bottom: 100px;
+    margin-top: 120px;
+    margin-bottom: 0px;
   }
   .footer__heading {
     font-size: 43px;
@@ -666,16 +1136,16 @@ body {
     margin-bottom: 35px;
   }
   .footer__socials {
-    margin-right: 70px;
+    margin-right: 40px;
   }
   .footer__socials--facebook {
-    width: 23px;
+    width: 15px;
   }
   .footer__socials--instagram {
-    width: 37px;
+    width: 28px;
   }
   .footer__socials--twitter {
-    width: 43px;
+    width: 30px;
   }
   .footer__all-socials {
     display: grid;
@@ -724,13 +1194,15 @@ body {
     justify-content: flex-end;
     align-items: flex-start;
     position: relative;
-    bottom: 300px;
-    right: 80px;
+    bottom: 380px;
+    right: 20px;
   }
   .footer__copyrights {
     font-size: 17px;
     font-family: Avenir;
     padding-bottom: 60px;
     margin-top: 0px;
+    position: relative;
+    bottom: 20px;
   }
 }/*# sourceMappingURL=bio.css.map */
