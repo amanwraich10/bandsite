@@ -23,6 +23,7 @@ body {
     padding-top: 2rem;
     padding-bottom: 1.5rem;
     width: 100%;
+    height: 136px;
   }
   .navbar__band--shows:hover {
     border-style: solid;
@@ -56,10 +57,10 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 18px 0px 20px 0px;
+    padding: 0px 0px 5px 0px;
   }
   .navbar__logo-icon {
-    width: 240px;
+    width: 195px;
   }
   .navbar__list {
     list-style: none;
@@ -71,20 +72,20 @@ body {
   .navbar__band--biography {
     color: #e1e1e1;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: Avenir;
   }
   .navbar__band--shows {
     color: #e1e1e1;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: Avenir;
   }
 }
 @media (min-width: 768px) {
   .navbar {
     width: 100%;
-    height: 115px;
+    height: 105px;
     background-color: #323232;
     display: flex;
     justify-content: flex-start;
@@ -97,19 +98,19 @@ body {
     border-style: solid;
     border-color: #e1e1e1;
     border-width: 0px 0px 5px 0px;
-    padding-bottom: 38px;
+    padding-bottom: 24px;
   }
   .navbar__band--biography:hover {
     border-style: solid;
     border-color: #e1e1e1;
     border-width: 0px 0px 5px 0px;
-    padding-bottom: 38px;
+    padding-bottom: 24px;
   }
   .navbar__band--shows:active {
     border-style: solid;
     border-color: white;
     border-width: 0px 0px 5px 0px;
-    padding-bottom: 38px;
+    padding-bottom: 24px;
     color: white;
     font-family: AvenirNext;
   }
@@ -117,12 +118,12 @@ body {
     border-style: solid;
     border-color: white;
     border-width: 0px 0px 5px 0px;
-    padding-bottom: 38px;
+    padding-bottom: 24px;
     color: white;
     font-family: AvenirNext;
   }
   .navbar__logo-icon {
-    width: 190px;
+    width: 170px;
   }
   .navbar__list {
     list-style: none;
@@ -135,48 +136,46 @@ body {
   .navbar__band--biography {
     color: #e1e1e1;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: Avenir;
     position: relative;
-    top: -10px;
     right: 25px;
   }
   .navbar__band--shows {
     color: #e1e1e1;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: Avenir;
     position: relative;
-    top: -10px;
     right: 45px;
   }
 }
 @media (min-width: 1280px) {
   .navbar {
     background-color: #323232;
-    height: 100px;
+    height: 88px;
     display: flex;
     justify-content: flex-start;
-    gap: 70px;
+    gap: 100px;
     padding: 40px 0px 30px 155px;
   }
   .navbar__band--shows:hover {
     border-style: solid;
     border-color: #e1e1e1;
     border-width: 0px 0px 3px 0px;
-    padding-bottom: 32px;
+    padding-bottom: 26px;
   }
   .navbar__band--biography:hover {
     border-style: solid;
     border-color: #e1e1e1;
     border-width: 0px 0px 3px 0px;
-    padding-bottom: 32px;
+    padding-bottom: 26px;
   }
   .navbar__band--shows:active {
     border-style: solid;
     border-color: white;
     border-width: 0px 0px 3px 0px;
-    padding-bottom: 32px;
+    padding-bottom: 26px;
     color: white;
     font-family: AvenirNext;
   }
@@ -184,7 +183,7 @@ body {
     border-style: solid;
     border-color: white;
     border-width: 0px 0px 3px 0px;
-    padding-bottom: 32px;
+    padding-bottom: 26px;
     color: white;
     font-family: AvenirNext;
   }
@@ -192,6 +191,7 @@ body {
     width: 130px;
   }
   .navbar__logo {
+    padding-top: 20px;
     padding-bottom: 20px;
   }
   .navbar__list {
@@ -200,24 +200,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 2.5rem;
+    gap: 3.5rem;
   }
   .navbar__band--biography {
     color: #e1e1e1;
     text-decoration: none;
     font-size: 1rem;
     font-family: Avenir;
-    position: relative;
-    top: 0%;
   }
   .navbar__band--shows {
     color: #e1e1e1;
     text-decoration: none;
     font-size: 1rem;
     font-family: Avenir;
-    position: relative;
-    top: 0px;
-    right: 20px;
   }
 }
 
@@ -230,7 +225,7 @@ body {
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-    height: 645px;
+    height: 485px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -238,16 +233,16 @@ body {
   }
   .header__text {
     color: #fafafa;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 1px;
     font-family: Avenir;
     padding-left: 40px;
-    margin-top: -100px;
-    margin-bottom: 40px;
+    margin-top: -15px;
+    margin-bottom: 25px;
   }
   .header__sub-text {
     color: #fafafa;
-    font-size: 56px;
+    font-size: 41px;
     letter-spacing: 1px;
     font-family: AvenirDemi;
     padding-left: 40px;
@@ -258,13 +253,13 @@ body {
   }
   .header__sub-text p {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
   .header__embed-iframe {
     position: relative;
-    top: 40px;
+    top: 35px;
     left: 50px;
-    width: 580px;
+    width: 470px;
   }
 }
 @media (min-width: 768px) {
@@ -273,7 +268,7 @@ body {
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-    height: 750px;
+    height: 730px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -281,11 +276,11 @@ body {
   }
   .header__text {
     color: #fafafa;
-    font-size: 38px;
+    font-size: 33px;
     letter-spacing: 1px;
     font-family: AvenirDemi;
     padding-left: 57px;
-    margin-top: -120px;
+    margin-top: -110px;
     margin-bottom: 20px;
   }
   .header__sub-text {
@@ -312,7 +307,7 @@ body {
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-    height: 730px;
+    height: 655px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -321,7 +316,7 @@ body {
   }
   .header__text {
     color: #fafafa;
-    font-size: 26px;
+    font-size: 25px;
     letter-spacing: 1px;
     font-family: AvenirDemi;
     padding-left: 150px;
@@ -331,20 +326,21 @@ body {
   }
   .header__sub-text {
     color: white;
-    font-size: 65px;
+    font-size: 60px;
     letter-spacing: 2px;
     font-family: AvenirDemi;
     padding-left: 150px;
+    margin-top: -10px;
   }
   .header__sub-text p {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
   .header__embed-iframe {
     position: relative;
-    left: 860px;
+    left: 840px;
     top: -160px;
-    width: 480px;
+    width: 465px;
   }
 }
 
@@ -353,66 +349,82 @@ body {
     background-color: white;
     box-sizing: border-box;
   }
+  .section--selected {
+    background-color: #e1e1e1;
+  }
   .section__heading {
-    font-size: 55px;
+    font-size: 42px;
     font-family: AvenirDemi;
     margin-bottom: 60px;
-    margin-top: 73px;
+    margin-top: 60px;
     margin-left: 40px;
     margin-bottom: 20px;
   }
-  .section__list {
-    list-style: none;
+  .section__shows--subheading-date {
+    color: #afafaf;
+    font-family: AvenirDemi;
+    font-size: 18px;
     margin-top: 0px;
+    margin-bottom: 10px;
+    padding-top: 25px;
+  }
+  .section__shows--subheading-venue {
+    color: #afafaf;
+    font-family: AvenirDemi;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 25px;
+  }
+  .section__shows--subheading-location {
+    color: #afafaf;
+    font-family: AvenirDemi;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 25px;
   }
   .section__shows--sub-heading {
     color: #afafaf;
-    font-family: Avenir;
-    font-weight: 700;
+    font-family: AvenirDemi;
+    font-size: 18px;
+    margin-top: 0px;
+    padding-top: 25px;
+  }
+  .section__show {
     font-size: 25px;
-  }
-  .section__first-show {
-    font-size: 30px;
     font-family: Avenir;
-    margin-left: 40px;
+    padding-left: 40px;
+    padding-top: 0px;
   }
-  .section__second-show {
-    font-size: 30px;
-    font-family: Avenir;
-    margin-left: 40px;
-  }
-  .section__third-show {
-    font-size: 30px;
-    font-family: Avenir;
-    margin-left: 40px;
-  }
-  .section__fourth-show {
-    font-size: 30px;
-    font-family: Avenir;
-    margin-left: 40px;
-  }
-  .section__fifth-show {
-    font-size: 30px;
-    font-family: Avenir;
-    margin-left: 40px;
-  }
-  .section__sixth-show {
-    font-size: 30px;
-    font-family: Avenir;
-    margin-left: 40px;
+  .section__show:hover {
+    background-color: #fafafa;
   }
   .section__shows-date {
     font-family: AvenirDemi;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 23px;
+  }
+  .section__shows--venue {
+    font-size: 23px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .section__shows--location {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 23px;
   }
   .section__shows--button {
     color: white;
     width: 92%;
-    font-size: 35px;
+    font-size: 25px;
     font-family: AvenirDemi;
-    font-weight: 700;
     background-color: #323232;
     border-radius: 10px;
-    padding: 24px;
+    padding: 11px;
     margin-bottom: 38px;
     border-color: #323232;
     margin-left: 5px;
@@ -421,7 +433,8 @@ body {
   }
   .section__divider {
     border-top: 2px solid #e1e1e1;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
 }
 @media (min-width: 768px) {
@@ -432,79 +445,90 @@ body {
   .section__heading {
     font-size: 55px;
     font-family: AvenirDemi;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     margin-top: 73px;
-    margin-left: 57px;
+    margin-left: 55px;
   }
-  .section__list {
-    list-style: none;
+  .section__show {
     display: flex;
-    gap: 230px;
-    margin-left: 20px;
+    justify-content: flex-start;
+    gap: 100px;
   }
-  .section__first-show {
-    display: flex;
+  .section__show:hover {
+    background-color: #fafafa;
   }
-  .section__second-show {
-    display: flex;
-  }
-  .section__third-show {
-    display: flex;
-  }
-  .section__fourth-show {
-    display: flex;
-  }
-  .section__fifth-show {
-    display: flex;
-  }
-  .section__sixth-show {
-    display: flex;
+  .section--selected {
+    background-color: #e1e1e1;
   }
   .section__shows--sub-heading {
-    color: #afafaf;
-    font-family: AvenirDemi;
-    font-weight: 700;
-    font-size: 19px;
+    display: none;
   }
-  .section__shows-date {
+  .section__shows--subheading-date {
+    color: #afafaf;
+    font-size: 19px;
     font-family: AvenirDemi;
-    font-size: 22px;
-    margin-left: 20px;
+    position: absolute;
+    top: 1005px;
+    left: 55px;
+  }
+  .section__shows--subheading-venue {
+    color: #afafaf;
+    font-size: 19px;
+    font-family: AvenirDemi;
+    position: absolute;
+    top: 1005px;
+    left: 345px;
+  }
+  .section__shows--subheading-location {
+    color: #afafaf;
+    font-size: 19px;
+    font-family: AvenirDemi;
+    position: absolute;
+    top: 1005px;
+    left: 615px;
   }
   .section__shows--button {
     color: white;
-    width: 20%;
-    font-size: 25px;
+    width: 19.5%;
+    font-size: 22px;
     font-family: AvenirDemi;
-    font-weight: 700;
     background-color: #323232;
     border-radius: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin-bottom: 0px;
     border-color: #323232;
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 0px;
+    margin-top: 20px;
     position: absolute;
-    left: 890px;
+    left: 875px;
+  }
+  .section__shows-date {
+    font-family: AvenirDemi;
+    font-size: 22px;
+    margin-left: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .section__shows--venue {
     font-size: 22px;
     font-family: Avenir;
     position: absolute;
-    left: 340px;
+    left: 345px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .section__shows--location {
     font-size: 22px;
     font-family: Avenir;
     position: absolute;
-    left: 630px;
+    left: 615px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .section__divider {
-    border-top: 2px solid #e1e1e1;
-    margin-bottom: 25px;
-    margin-top: 25px;
+    border-top: 1px solid #e1e1e1;
     margin-left: 30px;
     margin-right: 30px;
   }
@@ -514,98 +538,96 @@ body {
     background-color: white;
     box-sizing: border-box;
   }
-  .section__shows {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
   .section__heading {
-    font-size: 42px;
+    font-size: 37px;
     color: #323232;
     font-family: AvenirDemi;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     margin-top: 50px;
     margin-left: 150px;
   }
-  .section__list {
-    list-style: none;
-    display: flex;
-    gap: 200px;
+  .section__show:hover {
+    background-color: #fafafa;
   }
-  .section__all-shows {
-    position: relative;
-    top: 75px;
-    left: 100px;
+  .section--selected {
+    background-color: #e1e1e1;
   }
   .section__shows--sub-heading {
+    display: none;
+  }
+  .section__shows--subheading-date {
     color: #afafaf;
-    font-family: Avenir;
-    font-weight: 700;
     font-size: 15px;
-    margin-bottom: 30px;
+    font-family: AvenirDemi;
+    position: absolute;
+    top: 790px;
+    left: 345px;
+  }
+  .section__shows--subheading-venue {
+    color: #afafaf;
+    font-size: 15px;
+    font-family: AvenirDemi;
+    position: absolute;
+    top: 790px;
+    left: 642px;
+  }
+  .section__shows--subheading-location {
+    color: #afafaf;
+    font-size: 15px;
+    font-family: AvenirDemi;
+    position: absolute;
+    top: 790px;
+    left: 840px;
   }
   .section__shows-date {
     font-family: AvenirDemi;
-    font-size: 16px;
-    margin-left: 0px;
-    position: absolute;
-    left: 60px;
-  }
-  .section__first-show {
-    display: flex;
-  }
-  .section__second-show {
-    display: flex;
-  }
-  .section__third-show {
-    display: flex;
-  }
-  .section__fourth-show {
-    display: flex;
-  }
-  .section__fifth-show {
-    display: flex;
-  }
-  .section__sixth-show {
-    display: flex;
+    font-size: 14px;
+    position: relative;
+    left: 100px;
+    margin-left: 205px;
+    padding-top: 27px;
+    padding-bottom: 27px;
   }
   .section__shows--button {
     color: white;
-    width: 18%;
-    font-size: 15px;
+    width: 11.7%;
+    font-size: 13px;
     font-family: AvenirDemi;
-    font-weight: 700;
     background-color: #323232;
     border-radius: 5px;
-    margin: 0px;
-    padding: 13px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin-bottom: 0px;
     border-color: #323232;
-    position: absolute;
-    left: 760px;
-    margin-top: 0px;
-  }
-  .section__shows--venue {
-    font-size: 16px;
-    font-family: Avenir;
-    position: absolute;
-    left: 300px;
-  }
-  .section__shows--location {
-    width: 140px;
-    font-size: 16px;
-    font-family: Avenir;
-    position: absolute;
-    left: 550px;
-  }
-  .section__divider {
-    border-top: 1px solid #e1e1e1;
-    width: 970px;
-    margin-top: 65px;
-    margin-bottom: 15px;
     margin-left: 0px;
     margin-right: 0px;
-    margin-left: 30px;
+    margin-top: 14px;
+    position: absolute;
+    left: 1136px;
+  }
+  .section__shows--venue {
+    font-size: 14px;
+    font-family: Avenir;
+    position: absolute;
+    left: 640px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    margin-top: 0px;
+  }
+  .section__shows--location {
+    font-size: 14px;
+    font-family: Avenir;
+    position: absolute;
+    left: 840px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    margin-top: 0px;
+  }
+  .section__divider {
+    border-top: 2px solid #e1e1e1;
+    border-bottom: 0px;
+    margin-left: 315px;
+    margin-right: 80px;
   }
 }
 
@@ -619,47 +641,49 @@ body {
     width: 100%;
     padding-left: 40px;
     padding-right: 40px;
+    margin-top: 25px;
   }
   .footer__heading {
-    font-size: 55px;
+    font-size: 40px;
     letter-spacing: 1px;
-    padding-top: 60px;
+    padding-top: 50px;
     font-family: AvenirDemi;
     margin-top: 0px;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
   .footer__socials {
-    margin-right: 70px;
+    margin-right: 50px;
   }
   .footer__socials--facebook {
-    width: 30px;
+    width: 25px;
   }
   .footer__socials--instagram {
-    width: 52px;
+    width: 40px;
   }
   .footer__socials--twitter {
-    width: 60px;
+    width: 45px;
+    height: 40px;
   }
   .footer__agents {
-    font-size: 28px;
+    font-size: 23px;
     line-height: 15px;
     font-family: AvenirDemi;
-    margin-top: 60px;
+    margin-top: 40px;
     letter-spacing: 1px;
   }
   .footer__address {
-    font-size: 28px;
+    font-size: 22px;
     line-height: 15px;
     font-family: Avenir;
-    margin-top: 63px;
+    margin-top: 43px;
     letter-spacing: 1px;
   }
   .footer__contact {
-    font-size: 28px;
+    font-size: 22px;
     line-height: 15px;
     font-family: Avenir;
-    margin-top: 65px;
-    margin-bottom: 84px;
+    margin-top: 42px;
+    margin-bottom: 55px;
     letter-spacing: 1px;
   }
   .footer__band-name {
@@ -670,11 +694,11 @@ body {
     margin-top: 150px;
   }
   .footer__logo--icon {
-    width: 280px;
-    margin-top: 80px;
+    width: 220px;
+    margin-top: 70px;
   }
   .footer__copyrights {
-    font-size: 26px;
+    font-size: 17px;
     font-family: Avenir;
     padding-bottom: 40px;
     margin-bottom: 0px;
@@ -683,7 +707,6 @@ body {
 @media (min-width: 768px) {
   .footer {
     width: 100%;
-    height: 600px;
     padding-left: 40px;
     padding-right: 40px;
     margin-top: 50px;
@@ -691,25 +714,30 @@ body {
   .footer__heading {
     font-size: 55px;
     letter-spacing: 1px;
-    padding-top: 60px;
+    padding-top: 68px;
     font-family: AvenirDemi;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
   }
   .footer__socials {
     margin-right: 70px;
   }
   .footer__socials--facebook {
     width: 23px;
+    height: 40px;
   }
   .footer__socials--instagram {
     width: 37px;
+    height: 40px;
   }
   .footer__socials--twitter {
     width: 43px;
+    height: 40px;
   }
   .footer__all-socials {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    gap: 18px;
+    margin-left: 20px;
   }
   .footer__all-agents {
     display: grid;
@@ -728,11 +756,13 @@ body {
     font-family: AvenirDemi;
     margin-top: 60px;
     letter-spacing: 1px;
-    margin-bottom: 0px;
+    margin-bottom: -13px;
+    margin-top: 45px;
   }
   .footer__address {
     font-size: 21px;
     line-height: 12px;
+    margin-bottom: -8px;
     font-family: Avenir;
     margin-top: 63px;
     letter-spacing: 1px;
@@ -753,49 +783,54 @@ body {
     justify-content: flex-end;
     align-items: flex-start;
     position: relative;
-    bottom: 450px;
+    bottom: 360px;
     right: 65px;
   }
   .footer__copyrights {
     font-size: 21px;
     font-family: Avenir;
-    padding-bottom: 65px;
-    padding-top: 25px;
-    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    margin-top: -20px;
     margin-bottom: 0px;
+    position: relative;
+    bottom: 55px;
   }
 }
 @media (min-width: 1280px) {
   .footer {
     width: 100%;
-    height: 460px;
+    height: 390px;
     padding-left: 130px;
     padding-right: 130px;
     padding-bottom: 100px;
-    margin-top: 120px;
+    margin-top: 40px;
     margin-bottom: 0px;
   }
   .footer__heading {
-    font-size: 43px;
+    font-size: 35px;
     width: 500px;
     letter-spacing: 1px;
-    padding-top: 60px;
+    padding-top: 50px;
     font-family: AvenirDemi;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
   .footer__socials {
     margin-right: 40px;
+    margin-top: 10px;
     position: relative;
     right: 220px;
   }
   .footer__socials--facebook {
-    width: 15px;
+    width: 14px;
+    height: 40px;
   }
   .footer__socials--instagram {
-    width: 28px;
+    width: 25px;
   }
   .footer__socials--twitter {
     width: 30px;
+    height: 40px;
   }
   .footer__all-socials {
     display: grid;
@@ -813,45 +848,49 @@ body {
     margin-top: 35px;
   }
   .footer__agents {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 10px;
     font-family: AvenirDemi;
     margin-top: 50px;
+    margin-bottom: -20px;
     letter-spacing: 1px;
     margin-bottom: 0px;
   }
   .footer__address {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 10px;
     font-family: Avenir;
-    margin-top: 50px;
+    margin-top: 33px;
+    margin-bottom: -20px;
     letter-spacing: 1px;
   }
   .footer__contact {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 15px;
     font-family: Avenir;
-    margin-top: 50px;
+    margin-top: 45px;
     margin-bottom: 0px;
     letter-spacing: 1px;
     margin-bottom: 0px;
   }
   .footer__logo--icon {
-    width: 140px;
+    width: 120px;
   }
   .footer__logo {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     position: relative;
-    bottom: 380px;
+    bottom: 300px;
     right: 20px;
   }
   .footer__copyrights {
-    font-size: 17px;
+    font-size: 13px;
     font-family: Avenir;
+    padding-top: 0px;
     padding-bottom: 0px;
-    margin-top: 0px;
+    margin-top: -30px;
+    margin-bottom: 0px;
     position: relative;
     bottom: 20px;
   }

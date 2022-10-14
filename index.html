@@ -41,29 +41,30 @@
 
 		<main class="main">
 			<h2 class="main__heading">About the Musicians</h2>
-			<div class="main__section-image">
+			<div class="main__section-image"> 
 				<img
 					class="main__image"
 					src="./assets/images/band.jpg"
 					alt=""
 				/>
-			</div>
+			</div> 
 
-			<div class="main__text">
-				<p class="main__text--upper">
+			<ul class="main__text">
+				<li class="main__text--upper">
 					"We push each other to be the best. It's not uncommon for
 					one of us to say 'this needs to be better, back to the
 					drawing board'"
-				</p>
-				<p class="main__text--lower">
+				</li>
+				<li class="main__text--lower">
 					- Bryan Teddy, lead vocalist of The Bees Knees
-				</p>
-			</div>
+				</li>
+			</ul>
 
 			<div class="main__sub-text">
-				<p class="main__sub-text--heading">The Bees Knees</p>
-				<div class="main__description">
-					<p>
+				
+				<h3 class="main__sub-text--heading">The Bees Knees</h3>
+				<ul class="main__description">
+					<li>
 						The Bees Knees is a pop rock band originating from San
 						Francisco, California. The band consists of lead
 						vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist
@@ -74,8 +75,8 @@
 						Elephant in the room, One Trick Pony, The Cat's Meow),
 						Adams was confident the band could succeed even further,
 						pushing them to sign with Magenta Records.
-					</p>
-					<p>
+					</li>
+					<li>
 						From there, the band has soared, gaining international
 						recognition and ranking in the top 10 on the Poster
 						Charts. New fans immediately fell in love with the
@@ -87,14 +88,15 @@
 						touring in the future, The Bees Knees are currently
 						recording their second studio album, looking to be
 						released in late 2021.
-					</p>
-				</div>
+					</li>
+				</ul>
 			</div>
 		</main>
 
 		<section class="section">
 			<div>
 				<h2 class="section__heading">Photo Gallery</h2>
+			
 			</div>
 
 			<div class="section__photos-grid">
@@ -151,63 +153,26 @@
 			<div class="article__comment-box">
 				<img class="article__comment-image" alt=""/>
 				<form class="article__comment-form" action="">
-					<label class="article__form-name" for="name">NAME</label>
-					<input id="newComment-name" type="text"	placeholder="Enter your name"></input>
-			<label class="article__form-comment" for="comment">COMMENT</label>
-					<input id="newComment" type="comment" placeholder="Add a new comment"></input>
+					<label class="article__form-name" name="name">NAME</label>
+					<input class="article__name" type="text"	placeholder="Enter your name" name="name"></input>
+					<label class="article__form-comment" name="comment">COMMENT</label>
+					<input class="article__comment" type="comment" placeholder="Add a new comment" name="comment"></input>
 				</form>
 			</div>
-			<button id="addComments" class="article__comment-button">
+			<button id="addComments"type="submit" class="article__comment-button">
 				COMMENT
 			</button>
 			
+			<!-- <hr> -->
+			
 			<div class="article__allComments">
-				<hr>
-				<div class="article__comments">
-					<div class="article__comments-imageTop"></div>
-					<div>
-						<div class="article__comments--displayed">
-							<h2 class="article__comments-name">Connor Walton</h2>
-							<p class="article__comments-date">02/17/2021</p> 
-						</div>
-						<p class="article__comments--message">This is art. This is inexplicable magic expressed in purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
-						</p>
-					</div>
-				</div>
-
-			<hr>
-				<div class="article__comments">
-					<div class="article__comments-imageMiddle"></div>
-					<div>
-						<div class="article__comments--displayed">
-							<h2 class="article__comments-name">Emilie Beach</h2>
-							<p class="article__comments-date">01/09/2021</p>
-						</div>
-						<p class="article__comments--message">I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.
-						</p>
-					</div>
-				</div>
-
-				<hr>
-				<div class="article__comments">
-					<div class="article__comments-imageBottom"></div>
-					<div>
-						<div class="article__comments--displayed">
-							<h2 class="article__comments-name">Miles Acosta</h2>
-							<p class="article__comments-date">12/20/2020</p>
-						</div>
-
-						<p class="article__comments--message">I can't stop lisrening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.
-						</p>
-					</div>
-				</div>
-				<hr>
+				
 			</div> 
 		</article>
 
 		<footer class="footer">
 			<div class="footer__all-socials">
-				<p class="footer__heading">Get in Touch</p>
+				<h2 class="footer__heading">Get in Touch</h2>
 
 				<div class="footer__social--icons">
 					<a
@@ -308,6 +273,9 @@
 				</p>
 			</div>
 		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 		<script src="./scripts/index-page.js"></script>
 	</body>
 </html>
