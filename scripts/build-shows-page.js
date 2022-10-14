@@ -1,40 +1,90 @@
-const shows = [
+let shows = [
 	{
 		Date: "Mon Sept 06 2021",
 		Venue: "Ronald Lane",
 		Location: "San Francisco, CA",
+		url: "",
 	},
 	{
 		Date: "Tue Sept 21 2021",
 		Venue: "Pier 3 East",
 		Location: "San Francisco, CA",
+		url: "",
 	},
 	{
 		Date: "Fri Oct 15 2021",
 		Venue: "View Lounge",
 		Location: "San Francisco, CA",
+		url: "",
 	},
 	{
 		Date: "Sat Nov 06 2021",
 		Venue: "Hyatt Agency",
 		Location: "San Francisco, CA",
+		url: "",
 	},
 	{
 		Date: "Fri Nov 26 2021",
 		Venue: "Moscow Center",
 		Location: "San Francisco, CA",
+		url: "",
 	},
 	{
 		Date: "Wed Dec 15 2021",
 		Venue: "Press Club",
 		Location: "San Francisco, CA",
+		url: "",
 	},
 ];
 
 function showEntry(shows) {
+	// for (i = 0; i < shows.length; i++) {
+	// let show = shows[i];
 	displayShows(shows);
+	// }
+	// console.log(show.Date);
 }
-showEntry(shows);
+
+// showEntry(shows);
+
+let apiKey = "";
+
+function getApiKey() {
+	if ((apiKey = "")) {
+		return axios
+			.get("https://project-1-api.herokuapp.com/register")
+			.then((response) => {
+				apiKey = response.data.api_key;
+				return Promise.resolve(apiKey);
+			});
+	} else {
+		return Promise.resolve(apiKey);
+	}
+}
+
+function getshowdates() {
+	getApiKey()
+		.then((apiKey) =>
+			axios.get(
+				`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}/`
+			)
+		)
+
+		.then((response) => {
+			shows = response.data;
+			showEntry(shows);
+		})
+		.catch((err) => console.log(err));
+}
+
+function formatDateShow(Date) {
+	var d = new Date(+Date);
+	return d.toDateString();
+}
+
+formatDateShow(Date);
+
+getshowdates();
 
 function displayShows(shows) {
 	let showContainer = document.querySelector(".section__shows");
@@ -43,16 +93,12 @@ function displayShows(shows) {
 	sectionTitle.innerText = "Shows";
 	showContainer.appendChild(sectionTitle);
 
-	let divContainer = document.createElement("div");
-	divContainer.classList.add("section__all-shows");
-	showContainer.appendChild(divContainer);
-
 	let firstDiv = document.createElement("div");
-	firstDiv.classList.add("section__first-show");
-	divContainer.appendChild(firstDiv);
+	firstDiv.classList.add("section__show");
+	showContainer.appendChild(firstDiv);
 
 	let showsDateHeadingFirst = document.createElement("p");
-	showsDateHeadingFirst.classList.add("section__shows--sub-heading");
+	showsDateHeadingFirst.classList.add("section__shows--subheading-date");
 	showsDateHeadingFirst.innerText = "DATE";
 	firstDiv.appendChild(showsDateHeadingFirst);
 
@@ -62,23 +108,25 @@ function displayShows(shows) {
 	firstDiv.appendChild(showsDateFirst);
 
 	let showsVenueHeadingFirst = document.createElement("P");
-	showsVenueHeadingFirst.classList.add("section__shows--sub-heading");
+	showsVenueHeadingFirst.classList.add("section__shows--subheading-venue");
 	showsVenueHeadingFirst.innerText = "VENUE";
 	firstDiv.appendChild(showsVenueHeadingFirst);
 
 	let showsVenueFirst = document.createElement("p");
 	showsVenueFirst.classList.add("section__shows--venue");
-	showsVenueFirst.innerText = shows[0].Venue;
+	showsVenueFirst.innerText = shows.Venue;
 	firstDiv.appendChild(showsVenueFirst);
 
 	let showsLocationHeadingFirst = document.createElement("p");
-	showsLocationHeadingFirst.classList.add("section__shows--sub-heading");
+	showsLocationHeadingFirst.classList.add(
+		"section__shows--subheading-location"
+	);
 	showsLocationHeadingFirst.innerText = "LOCATION";
 	firstDiv.appendChild(showsLocationHeadingFirst);
 
 	let showsLocationFirst = document.createElement("p");
 	showsLocationFirst.classList.add("section__shows--location");
-	showsLocationFirst.innerText = shows[0].Location;
+	showsLocationFirst.innerText = shows.Location;
 	firstDiv.appendChild(showsLocationFirst);
 
 	let buttonFirst = document.createElement("button");
@@ -88,13 +136,13 @@ function displayShows(shows) {
 
 	let dividerFirst = document.createElement("hr");
 	dividerFirst.classList.add("section__divider");
-	divContainer.appendChild(dividerFirst);
+	showContainer.appendChild(dividerFirst);
 
 	// 	SECOND LIST OF SHOW DETAILS
 
 	let secondDiv = document.createElement("div");
-	secondDiv.classList.add("section__second-show");
-	divContainer.appendChild(secondDiv);
+	secondDiv.classList.add("section__show");
+	showContainer.appendChild(secondDiv);
 
 	let showsDateHeadingSecond = document.createElement("p");
 	showsDateHeadingSecond.classList.add("section__shows--sub-heading");
@@ -133,13 +181,13 @@ function displayShows(shows) {
 
 	let dividerSecond = document.createElement("hr");
 	dividerSecond.classList.add("section__divider");
-	divContainer.appendChild(dividerSecond);
+	showContainer.appendChild(dividerSecond);
 
 	//THIRD LIST OF SHOW DETAILS
 
 	let thirdDiv = document.createElement("div");
-	thirdDiv.classList.add("section__third-show");
-	divContainer.appendChild(thirdDiv);
+	thirdDiv.classList.add("section__show");
+	showContainer.appendChild(thirdDiv);
 
 	let showsDateHeadingThird = document.createElement("p");
 	showsDateHeadingThird.classList.add("section__shows--sub-heading");
@@ -178,13 +226,13 @@ function displayShows(shows) {
 
 	let dividerThird = document.createElement("hr");
 	dividerThird.classList.add("section__divider");
-	divContainer.appendChild(dividerThird);
+	showContainer.appendChild(dividerThird);
 
 	//FOURTH LIST OF SHOW DETAILS
 
 	let fourthDiv = document.createElement("div");
-	fourthDiv.classList.add("section__fourth-show");
-	divContainer.appendChild(fourthDiv);
+	fourthDiv.classList.add("section__show");
+	showContainer.appendChild(fourthDiv);
 
 	let showsDateHeadingFourth = document.createElement("p");
 	showsDateHeadingFourth.classList.add("section__shows--sub-heading");
@@ -223,13 +271,13 @@ function displayShows(shows) {
 
 	let dividerFourth = document.createElement("hr");
 	dividerFourth.classList.add("section__divider");
-	divContainer.appendChild(dividerFourth);
+	showContainer.appendChild(dividerFourth);
 
 	//FIFTH LIST OF SHOWS
 
 	let fifthDiv = document.createElement("div");
-	fifthDiv.classList.add("section__fifth-show");
-	divContainer.appendChild(fifthDiv);
+	fifthDiv.classList.add("section__show");
+	showContainer.appendChild(fifthDiv);
 
 	let showsDateHeadingFifth = document.createElement("p");
 	showsDateHeadingFifth.classList.add("section__shows--sub-heading");
@@ -268,13 +316,13 @@ function displayShows(shows) {
 
 	let dividerFifth = document.createElement("hr");
 	dividerFifth.classList.add("section__divider");
-	divContainer.appendChild(dividerFifth);
+	showContainer.appendChild(dividerFifth);
 
 	//SIXTH LIST OF SHOWS
 
 	let sixthDiv = document.createElement("div");
-	sixthDiv.classList.add("section__sixth-show");
-	divContainer.appendChild(sixthDiv);
+	sixthDiv.classList.add("section__show");
+	showContainer.appendChild(sixthDiv);
 
 	let showsDateHeadingSixth = document.createElement("p");
 	showsDateHeadingSixth.classList.add("section__shows--sub-heading");
@@ -313,5 +361,20 @@ function displayShows(shows) {
 
 	let dividerSixth = document.createElement("hr");
 	dividerSixth.classList.add("section__divider");
-	divContainer.appendChild(dividerSixth);
+	showContainer.appendChild(dividerSixth);
 }
+
+const showsAll = document.querySelectorAll(".section__show");
+
+function clearClick() {
+	showsAll.forEach((shows) => {
+		shows.classList.remove("section--selected");
+	});
+}
+
+showsAll.forEach((shows) => {
+	shows.addEventListener("click", () => {
+		clearClick();
+		shows.classList.add("section--selected");
+	});
+});
