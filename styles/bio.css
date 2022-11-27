@@ -896,10 +896,6 @@ body {
     display: flex;
     justify-content: flex-start;
   }
-  .article__comment-form {
-    position: relative;
-    left: 300px;
-  }
   .article__form-name {
     color: #afafaf;
     font-size: 13px;
@@ -928,22 +924,24 @@ body {
   }
   .article__images {
     background-color: #e1e1e1;
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
+    position: relative;
+    left: 320px;
   }
   .article__comments {
     font-family: Avenir;
     display: flex;
-    justify-content: space-around;
-    gap: 40px;
     margin-right: 40px;
-    margin-left: 40px;
+    margin-left: 110px;
   }
   .article__comments--name {
     font-family: AvenirDemi;
     font-size: 15px;
     color: #323232;
     margin-left: 300px;
+    margin-top: 19.95px;
+    margin-bottom: 19.95px;
   }
   .article__comments--date {
     color: #afafaf;
@@ -958,13 +956,20 @@ body {
     width: 40%;
     margin-left: 300px;
   }
+  .article__comments--upper {
+    display: flex;
+  }
+  .article__comments--message {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
   .article hr {
     border-top: 3px solid #e1e1e1;
     border-bottom: 0px;
-    margin-left: 40px;
+    margin-left: 440px;
     margin-right: 40px;
     margin-top: 5px;
-    width: 60%;
+    width: 40%;
   }
 }
 

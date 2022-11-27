@@ -1,39 +1,15 @@
-let comments = [
-	{
-		name: "Connor Walton",
-		timestamp: "02/17/2021",
-		comment:
-			"This is art. This is inexplicable magic expressed in purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-	},
-	{
-		name: "Emilie Beach",
-		timestamp: "01/09/2021",
-		comment:
-			"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-	},
-	{
-		name: "Miles Acosta",
-		timestamp: "12/20/2020",
-		comment:
-			"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-	},
-];
-
 const form = document.querySelector(".article__comment-form");
+const submitButton = document.querySelector(".article__comment-button");
 
-form.addEventListener("click", (event) => {
-	let nameinput = document.querySelector(".article__name");
-	let commentinput = document.querySelector(".article__comment");
-
-	if (event.target.name.value && event.target.comment.value) {
-		nameinput.style.borderColor = blue;
-		commentinput.style.borderColor = blue;
-		addComment(event);
-	}
+submitButton.addEventListener("click", (event) => {
+	console.log(event.target);
+	event.preventDefault();
+	addComment(event);
 });
 
 function addComment(event) {
-	event.preventdefault();
+	console.log(form.name.value);
+	event.preventDefault();
 
 	getApiKey()
 		.then((apiKey) => {
@@ -47,29 +23,10 @@ function addComment(event) {
 		})
 		.then(() => {
 			loadComments();
-			event.target.reset();
 		})
 
 		.catch((error) => console.log(error));
 }
-
-const submitButton = document.querySelector(".article__comment-button");
-
-submitButton.addEventListener("click", (event) => {
-	let nameinput = document.querySelector(".article__name");
-	let commentinput = document.querySelector(".article__comment");
-	event.preventDefault();
-	addComment();
-	nameinput.value = "";
-	commentContainer.value = "";
-	clearAllComments();
-
-	comments.forEach((comment) => {
-		displayComment(comment);
-	});
-});
-
-let userName = document.querySelector(".article__name");
 
 let commentContainer = document.querySelector(".article__allComments");
 
@@ -78,12 +35,15 @@ function clearAllComments(id) {
 }
 
 function displayComment(comm) {
+	let date = new Date(comm.timestamp);
+	let commentdate = date.toISOString().replaceAll("-", "/").split("T")[0];
+
 	let commentsDivFirst = document.createElement("div");
 	commentsDivFirst.classList.add("article__comments");
 	commentContainer.appendChild(commentsDivFirst);
 
 	let divImage = document.createElement("div");
-	divImage.classList.add(".article__image-container");
+	divImage.classList.add("article__image-container");
 	commentsDivFirst.appendChild(divImage);
 
 	let commentImage = document.createElement("img");
@@ -91,7 +51,7 @@ function displayComment(comm) {
 	divImage.appendChild(commentImage);
 
 	let commentsDivSecond = document.createElement("div");
-	commentsDivSecond.classList.add(".article__allcommments");
+	commentsDivSecond.classList.add("article__allcomments");
 	commentsDivFirst.appendChild(commentsDivSecond);
 
 	let commentsDivThird = document.createElement("div");
@@ -105,31 +65,20 @@ function displayComment(comm) {
 
 	let commentDate = document.createElement("h4");
 	commentDate.classList.add("article__comments--date");
-	commentDate.innerText = comm.timestamp;
+	commentDate.innerText = commentdate;
 	commentsDivThird.appendChild(commentDate);
 
 	let messageDiv = document.createElement("div");
-	messageDiv.classList.add(".article__message-container");
+	messageDiv.classList.add("article__message-container");
 	commentsDivSecond.appendChild(messageDiv);
 
-	let commentMessage = document.querySelector("p");
+	let commentMessage = document.querySelector("div");
 	commentMessage.classList.add("article__comments--message");
 	commentMessage.innerText = comm.comment;
 	messageDiv.appendChild(commentMessage);
 
 	let divider = document.createElement("hr");
 	commentContainer.appendChild(divider);
-}
-
-// ADD COMMENTS ON FORM
-let newComment_name = document.querySelector(".article__name").value;
-let newComment_comment = document.querySelector(".article__comment").value;
-
-function addComment() {
-	let newComment = {};
-	newComment.name = newComment_name.value;
-	newComment.comment = newComment_comment.value;
-	comments.unshift(newComment);
 }
 
 let apiKey = "";
@@ -149,11 +98,6 @@ function getApiKey() {
 	});
 }
 
-function formatDate(timestamp) {
-	let date = new Date(timestamp);
-	return date.toISOString().replaceAll(("-", "/").split("T")[0]);
-}
-
 function loadComments() {
 	getApiKey()
 		.then((apiKey) =>
@@ -162,6 +106,7 @@ function loadComments() {
 			)
 		)
 		.then((res) => {
+			console.log(res);
 			return (comments = res.data);
 		})
 		.then((comments) => {

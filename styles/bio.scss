@@ -997,11 +997,6 @@ body {
 			justify-content: flex-start;
 		}
 
-		&__comment-form {
-			position: relative;
-			left: 300px;
-		}
-
 		&__form-name {
 			color: #afafaf;
 			font-size: 13px;
@@ -1033,17 +1028,19 @@ body {
 
 		&__images {
 			background-color: $Mercury;
-			width: 55px;
-			height: 55px;
+			width: 52px;
+			height: 52px;
+			position: relative;
+			left: 320px;
 		}
 
 		&__comments {
 			font-family: Avenir;
 			display: flex;
-			justify-content: space-around;
-			gap: 40px;
+			// justify-content: center;
+			// gap: 40px;
 			margin-right: 40px;
-			margin-left: 40px;
+			margin-left: 110px;
 		}
 
 		&__comments--name {
@@ -1051,6 +1048,8 @@ body {
 			font-size: 15px;
 			color: $Black;
 			margin-left: 300px;
+			margin-top: 19.95px;
+			margin-bottom: 19.95px;
 		}
 		&__comments--date {
 			color: #afafaf;
@@ -1067,13 +1066,22 @@ body {
 			margin-left: 300px;
 		}
 
+		&__comments--upper {
+			display: flex;
+		}
+
+		&__comments--message {
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+
 		& hr {
 			border-top: 3px solid $Mercury;
 			border-bottom: 0px;
-			margin-left: 40px;
+			margin-left: 440px;
 			margin-right: 40px;
 			margin-top: 5px;
-			width: 60%;
+			width: 40%;
 		}
 	}
 }
